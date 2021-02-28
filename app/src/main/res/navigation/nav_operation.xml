@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/button_fragment">
+
+    <fragment
+        android:id="@+id/button_fragment"
+        android:name="com.example.testapp.ui.main.view.ChooseAppFragment"
+        tools:layout="@layout/fragment_choose_app">
+
+        <action
+            android:id="@+id/action_button_fragment_to_ticket_fragment"
+            app:destination="@+id/ticket_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_button_fragment_to_beer_fragment"
+            app:destination="@+id/beer_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ticket_fragment"
+        android:name="com.example.testapp.ui.main.view.OperationTicketFragment"
+        tools:layout="@layout/fragment_operation_ticket">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/beer_fragment"
+        android:name="com.example.testapp.ui.main.view.BeerFragment"
+        android:label="@string/beer_title"
+        tools:layout="@layout/fragment_beer">
+
+        <action
+            android:id="@+id/beer_fragment_to_detail_beer_fragment"
+            app:destination="@+id/detail_beer_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detail_beer_fragment"
+        android:name="com.example.testapp.ui.main.view.DetailBeerFragment"
+        tools:layout="@layout/fragment_beer_detail">
+        <argument
+            android:name="beerName"
+            app:argType="string"/>
+        <argument
+            android:name="beerId"
+            app:argType="string"/>
+    </fragment>
+
+</navigation>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TestApp</string>
+
+    <string name="operations_rejected">%1$s  bloqueadas</string>
+    <string name="operations_pending">%1$s  operaciones pendientes</string>
+    <string name="beer_title">Cervezas</string>
+    <string name="beer_date_text">%1$s %2$s</string>
+    <string name="beer_food_pairing_text">+ %1$s</string>
+</resources>
